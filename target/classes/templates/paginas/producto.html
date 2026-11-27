@@ -1,0 +1,100 @@
+<!-- Detalle de un producto -->
+<th:block th:fragment="plantillas">
+
+  <template id="tpl-producto-detalle">
+    <div class="detail-wrap">
+      <div class="breadcrumbs">
+        <a href="#" onclick="go('inicio');return false">Inicio</a> ›
+        <a href="#" onclick="go('catalogo');return false">Productos</a> ›
+        {{nombre}}
+      </div>
+
+      <div class="detail-layout">
+
+        <!-- Galería de fotos -->
+        <div class="gallery">
+          <div class="thumbs">{{{miniaturas}}}</div>
+          <div class="main-product-image">
+            <span class="discount {{claseDescuento}}">{{textoDescuento}}</span>
+            <img id="mainProductPhoto" class="main-photo" src="{{foto}}" alt="{{nombre}}" onerror="imgFallback(this)">
+            <span class="zoom">⌕</span>
+          </div>
+        </div>
+
+        <!-- Información -->
+        <div class="product-detail-info">
+          <div class="brand-name">{{marca}}</div>
+          <h1>{{nombre}}</h1>
+          <div class="sku">SKU&nbsp; {{sku}}</div>
+          <p class="seller">Vendido por Tiendas ElectroHogar</p>
+
+          <div class="detail-price">{{precio}} <span>Oferta</span></div>
+          <div class="detail-old {{claseViejo}}">{{precioViejo}}</div>
+
+          <div class="promo-line">
+            <span>2 CUPONES DISPONIBLES</span>
+            <a href="#" onclick="toast('Promociones disponibles próximamente');return false">▤ &nbsp;Ver promociones con tarjeta</a>
+          </div>
+
+          <div class="buy-row">
+            <div class="quantity">
+              <button onclick="detailQty(-1)">−</button>
+              <span id="detailQty">1</span>
+              <button onclick="detailQty(1)">＋</button>
+            </div>
+            <button class="btn add-detail" onclick="addDetailCart({{id}})">Agregar al carrito</button>
+            <button class="heart" onclick="toggleFavorite({{id}}, this)">{{corazon}}</button>
+          </div>
+
+          <div class="pay-box">
+            <b>Powerpay</b>
+            <span>Desde <strong>{{cuota}}</strong> al mes o en 3 cuotas sin intereses<br>
+            Con todas las tarjetas de crédito <u>Más información</u></span>
+          </div>
+
+          <div class="delivery-options">
+            <div>
+              <span class="delivery-icon">🚚</span>
+              <span>Disponible envío a domicilio<br>
+                <a href="#" onclick="toast('Consulta de cobertura próximamente');return false">Consultar</a></span>
+            </div>
+            <div>
+              <span class="delivery-icon">▣</span>
+              <span>Disponible retiro en tienda<br>
+                <a href="#" onclick="toast('Consulta de tiendas próximamente');return false">Consultar</a></span>
+            </div>
+          </div>
+
+          <div class="extra-section">
+            <h3>Garantía adicional</h3>
+            {{{garantias}}}
+            <a href="#" onclick="toast('Mostrando garantías disponibles');return false">Ver más garantías</a>
+          </div>
+
+          <div class="extra-section">
+            <h3>Servicios</h3>
+            {{{servicios}}}
+            <a href="#" onclick="toast('Mostrando servicios disponibles');return false">Ver más servicios</a>
+          </div>
+
+          <p class="product-description">{{descripcion}}</p>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- Miniatura de la galería -->
+  <template id="tpl-miniatura">
+    <button class="thumb {{activa}}" onclick="changeProductPhoto({{indice}})">
+      <img src="{{foto}}" alt="Foto {{numero}}" onerror="imgFallback(this)">
+    </button>
+  </template>
+
+  <!-- Garantía o servicio (botón de opción) -->
+  <template id="tpl-opcion-extra">
+    <label class="option">
+      <input type="radio" name="{{grupo}}" value="{{id}}"> {{nombre}} <b>{{precio}}</b>
+    </label>
+  </template>
+
+</th:block>

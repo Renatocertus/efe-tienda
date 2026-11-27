@@ -1,0 +1,35 @@
+<!-- Carrito de compras -->
+<th:block th:fragment="plantillas">
+
+  <template id="tpl-carrito">
+    <div class="page-wrap">
+      <div class="page-title"><h1>Mi carrito</h1></div>
+      <div class="layout">
+        <div class="panel">{{{lineas}}}</div>
+        <div class="panel">
+          <h2>Resumen de compra</h2>
+          <p class="muted">Subtotal</p>
+          <div class="total">{{total}}</div>
+          <button class="btn" style="width:100%;margin-top:18px" {{deshabilitado}} onclick="go('checkout')">Continuar pedido</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="tpl-carrito-linea">
+    <div class="cart-line">
+      <div>
+        <b>{{icono}} {{nombre}}</b>
+        <div class="muted">{{precio}} c/u</div>
+      </div>
+      <div class="qty">
+        <button onclick="changeQty({{id}}, -1)">−</button>
+        {{cantidad}}
+        <button onclick="changeQty({{id}}, 1)">+</button>
+      </div>
+      <b>{{subtotal}}</b>
+      <button onclick="removeLine({{id}})">✕</button>
+    </div>
+  </template>
+
+</th:block>

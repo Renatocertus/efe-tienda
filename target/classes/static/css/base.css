@@ -1,0 +1,117 @@
+/* ---------------------------------------------------------------------
+   1. FUENTES Y VARIABLES
+   --------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap');
+
+:root {
+  --navy:   #102c50;
+  --blue:   #0757a6;
+  --orange: #f47b20;
+  --ink:    #172536;
+  --muted:  #718096;
+  --line:   #e7ebf0;
+  --bg:     #f6f8fb;
+  --white:  #fff;
+}
+
+
+/* ---------------------------------------------------------------------
+   2. BASE
+   --------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Manrope, sans-serif;
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 43px;
+  line-height: 1.13;
+}
+
+h1 em {
+  font-style: normal;
+  color: #ff9a4d;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: var(--orange);
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.empty {
+  text-align: center;
+  padding: 35px;
+  color: var(--muted);
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+/* ---------------------------------------------------------------------
+   3. BOTONES
+   --------------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  border: 0;
+  background: var(--orange);
+  color: #fff;
+  padding: 13px 20px;
+  border-radius: 7px;
+  font-weight: 800;
+}
+
+.btn:hover {
+  filter: brightness(.95);
+}
+
+.btn.secondary {
+  background: var(--navy);
+}
+
+.btn.outline {
+  background: #fff;
+  color: var(--navy);
+  border: 1px solid var(--line);
+}
+
+.btn.small {
+  padding: 10px 13px;
+}

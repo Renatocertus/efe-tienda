@@ -1,0 +1,97 @@
+/* ---------------------------------------------------------------------
+   7. TARJETAS BASE (mismo fondo, borde y esquinas)
+   --------------------------------------------------------------------- */
+.category-card,
+.product-card,
+.panel,
+.form-card,
+.stat {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+
+/* ---------------------------------------------------------------------
+   9. PRODUCTOS (tarjetas del catálogo)
+   --------------------------------------------------------------------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 5px #102c5008;
+}
+
+.product-card h3 a:hover {
+  color: var(--blue);
+}
+
+/* Botón invisible que envuelve la foto (abre el detalle) */
+.product-open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.product-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 205px;
+  padding: 14px;
+  background: #fff;
+}
+
+.product-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  object-fit: contain;
+  transition: transform .25s ease;
+}
+
+.product-card:hover .product-img img {
+  transform: scale(1.045);
+}
+
+.product-info {
+  padding: 13px 15px 15px;
+}
+
+.product-info h3 {
+  min-height: 36px;
+  font-size: 15px;
+}
+
+.product-info .btn {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-card .muted {
+  line-height: 1.5;
+}
+
+.price {
+  margin: 8px 0;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--navy);
+}
+
+.old-price {
+  margin-left: 7px;
+  text-decoration: line-through;
+  color: #9aa4b2;
+  font-size: 12px;
+}

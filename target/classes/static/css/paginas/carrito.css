@@ -1,0 +1,30 @@
+/* ---------------------------------------------------------------------
+   12. CARRITO
+   --------------------------------------------------------------------- */
+.cart-line {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 20px;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty button {
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #fff;
+}
+
+.total {
+  font-size: 23px;
+  font-weight: 800;
+  color: var(--navy);
+}

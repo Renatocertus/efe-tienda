@@ -1,0 +1,34 @@
+package com.efe.tienda.model;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "marcas")
+public class Marca {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false, unique = true, length = 100)
+    private String nombre;
+
+    private Boolean activo = true;
+
+    public Marca() {}
+
+    public Marca(Long id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+        this.activo = true;
+    }
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+
+    public Boolean getActivo() { return activo; }
+    public void setActivo(Boolean activo) { this.activo = activo; }
+}

@@ -1,0 +1,21 @@
+<!-- Catálogo de productos -->
+<th:block th:fragment="plantillas">
+
+  <template id="tpl-catalogo">
+    <div class="page-wrap">
+      <div class="page-title">
+        <span class="eyebrow">CATÁLOGO</span>
+        <h1>Todos los productos</h1>
+        <p class="muted">Encuentra el producto ideal para ti.</p>
+      </div>
+      <div class="filter-row">
+        <select id="categoryFilter" onchange="renderCatalog()">
+          <option value="">Todas las categorías</option>
+          {{{categorias}}}
+        </select>
+      </div>
+      <div class="product-grid" id="catalogResults"></div>
+    </div>
+  </template>
+
+</th:block>

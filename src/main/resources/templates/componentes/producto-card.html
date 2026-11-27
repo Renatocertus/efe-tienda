@@ -1,0 +1,21 @@
+<!-- Tarjeta de producto (inicio y catálogo) -->
+<th:block th:fragment="plantillas">
+
+  <template id="tpl-producto-card">
+    <article class="product-card">
+      <button class="product-open" onclick="openProduct({{id}})" aria-label="Ver {{nombre}}">
+        <div class="product-img">
+          <img src="{{foto}}" alt="{{nombre}}" loading="lazy" onerror="imgFallback(this)">
+        </div>
+      </button>
+      <div class="product-info">
+        <div class="muted">{{categoria}} · {{marca}}</div>
+        <h3><a href="#" onclick="openProduct({{id}});return false">{{nombre}}</a></h3>
+        <div class="price">{{precio}} <span class="old-price {{claseViejo}}">{{precioViejo}}</span></div>
+        <div class="muted">Stock: {{stock}}</div>
+        <button class="btn" onclick="addCart({{id}})">Agregar al carrito</button>
+      </div>
+    </article>
+  </template>
+
+</th:block>

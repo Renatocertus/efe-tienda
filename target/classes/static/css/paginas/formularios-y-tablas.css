@@ -1,0 +1,146 @@
+/* ---------------------------------------------------------------------
+   11. PÁGINAS INTERNAS (formularios, tablas, etiquetas)
+   --------------------------------------------------------------------- */
+.page-wrap {
+  max-width: 1200px;
+  margin: 35px auto;
+  padding: 0 18px;
+}
+
+.page-title {
+  margin-bottom: 22px;
+}
+
+.page-title h1 {
+  font-size: 30px;
+  color: var(--navy);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+}
+
+.panel {
+  margin-bottom: 18px;
+  padding: 22px;
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 19px;
+}
+
+/* Formularios (login, registro, checkout) */
+.form-card {
+  max-width: 620px;
+  margin: 35px auto;
+  padding: 30px;
+}
+
+.form-card h1 {
+  font-size: 28px;
+  color: var(--navy);
+}
+
+.form-card .btn {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 13px;
+}
+
+.field label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #536174;
+}
+
+.field input,
+.field select,
+.field textarea {
+  padding: 12px;
+  border: 1px solid #dce3eb;
+  border-radius: 7px;
+  background: #fff;
+  outline: 0;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--blue);
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.filter-row select {
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fff;
+}
+
+/* Tablas */
+.table-wrap {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th,
+td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 11px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+/* Etiquetas de estado */
+.tag {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 20px;
+  background: #fff3e8;
+  color: #b85b12;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tag.green {
+  background: #e8f7ef;
+  color: #16834b;
+}
+
+.tag.gray {
+  background: #eef2f6;
+  color: #64748b;
+}

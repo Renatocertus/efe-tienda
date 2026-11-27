@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ElectroHogar | Tecnología y hogar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" th:href="@{/css/base.css}">
+  <link rel="stylesheet" th:href="@{/css/componentes/cabecera.css}">
+  <link rel="stylesheet" th:href="@{/css/componentes/tarjetas.css}">
+  <link rel="stylesheet" th:href="@{/css/paginas/inicio.css}">
+  <link rel="stylesheet" th:href="@{/css/paginas/detalle-producto.css}">
+  <link rel="stylesheet" th:href="@{/css/paginas/formularios-y-tablas.css}">
+  <link rel="stylesheet" th:href="@{/css/paginas/carrito.css}">
+  <link rel="stylesheet" th:href="@{/css/paginas/admin.css}">
+  <link rel="stylesheet" th:href="@{/css/componentes/pie-y-toast.css}">
+  <link rel="stylesheet" th:href="@{/css/responsive.css}">
+</head>
+<body>
+
+  <!-- Cabecera -->
+  <header class="topbar">
+    <a class="brand" href="#" data-page="inicio">
+      <span class="brand-mark">HOGAR</span>
+      <span>Electro<b>HOGAR</b></span>
+    </a>
+
+    <div class="search">
+      <input id="searchInput" placeholder="¿Qué estás buscando?">
+      <button id="searchBtn">Buscar</button>
+    </div>
+
+    <nav id="mainNav">
+      <a href="#" data-page="inicio">Inicio</a>
+      <a href="#" data-page="catalogo">Productos</a>
+      <a href="#" data-page="pedidos">Mis pedidos</a>
+      <a href="#" data-page="admin" id="adminNav" class="hidden">Administración</a>
+    </nav>
+
+    <div class="account" id="accountArea">
+      <a href="#" data-page="login">Iniciar sesión</a>
+      <a class="btn small" href="#" data-page="registro">Crear cuenta</a>
+    </div>
+
+    <button class="cart-btn" data-page="carrito">🛒 <span id="cartCount">0</span></button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </header>
+
+  <!-- Aquí el JS pinta cada página -->
+  <main id="app"></main>
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="footer-brand">HOGAR</div>
+    <p>Tu tienda de tecnología y electrohogar.</p>
+    <small>Proyecto académico · Los datos se guardan en este navegador.</small>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+
+  <!-- Plantillas HTML (el JS las usa para dibujar cada página) -->
+  <th:block th:replace="~{componentes/comunes :: plantillas}"></th:block>
+  <th:block th:replace="~{componentes/cuenta :: plantillas}"></th:block>
+  <th:block th:replace="~{componentes/producto-card :: plantillas}"></th:block>
+  <th:block th:replace="~{paginas/inicio :: plantillas}"></th:block>
+  <th:block th:replace="~{paginas/catalogo :: plantillas}"></th:block>
+  <th:block th:replace="~{paginas/producto :: plantillas}"></th:block>
+  <th:block th:replace="~{paginas/auth :: plantillas}"></th:block>
+  <th:block th:replace="~{paginas/carrito :: plantillas}"></th:block>
+  <th:block th:replace="~{paginas/pedidos :: plantillas}"></th:block>
+  <th:block th:replace="~{paginas/admin :: plantillas}"></th:block>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Orden importante: primero lo básico, al final app.js que arranca todo -->
+  <script th:src="@{/js/core/utils.js?v=2}"></script>
+  <script th:src="@{/js/core/datos.js?v=2}"></script>
+  <script th:src="@{/js/core/api.js?v=7}"></script>
+  <script th:src="@{/js/core/navegacion.js?v=7}"></script>
+  <script th:src="@{/js/componentes/tarjeta-producto.js?v=7}"></script>
+  <script th:src="@{/js/paginas/inicio.js?v=7}"></script>
+  <script th:src="@{/js/paginas/catalogo.js?v=7}"></script>
+  <script th:src="@{/js/paginas/producto.js?v=7}"></script>
+  <script th:src="@{/js/paginas/auth.js?v=7}"></script>
+  <script th:src="@{/js/paginas/carrito.js?v=7}"></script>
+  <script th:src="@{/js/paginas/pedidos.js?v=7}"></script>
+  <script th:src="@{/js/paginas/admin.js?v=8}"></script>
+  <script th:src="@{/js/app.js?v=8}"></script>
+</body>
+</html>

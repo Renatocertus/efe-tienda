@@ -1,0 +1,296 @@
+/* ---------------------------------------------------------------------
+   10. DETALLE DE PRODUCTO
+   --------------------------------------------------------------------- */
+.detail-wrap {
+  max-width: 1235px;
+  margin: 0 auto;
+  padding: 24px 18px 0;
+}
+
+.breadcrumbs {
+  margin-bottom: 42px;
+  font-size: 11px;
+  color: #285a91;
+}
+
+.breadcrumbs a {
+  color: #6b8eb5;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1.22fr .9fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Galería: miniaturas + foto principal */
+.gallery {
+  position: sticky;
+  top: 105px;
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 10px;
+}
+
+.thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.thumb {
+  display: grid;
+  place-items: center;
+  height: 57px;
+  padding: 3px;
+  border: 1px solid #e3e8ef;
+  border-radius: 6px;
+  background: #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.thumb.active {
+  border: 1px solid #0871ce;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.main-product-image {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 530px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.main-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 530px;
+  padding: 28px;
+  object-fit: contain;
+}
+
+.discount {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 7px 12px;
+  background: #ffad43;
+  color: var(--ink);
+  font-weight: 800;
+  border-radius: 0 0 6px 0;
+}
+
+.zoom {
+  position: absolute;
+  right: 16px;
+  bottom: 15px;
+  padding: 5px 12px;
+  border: 1px solid #0871ce;
+  border-radius: 6px;
+  color: #0871ce;
+  font-size: 25px;
+}
+
+/* Columna de información */
+.product-detail-info {
+  padding: 0 0 20px;
+}
+
+.product-detail-info h1 {
+  margin: 0 0 13px;
+  font-family: Manrope, sans-serif;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #082c50;
+}
+
+.brand-name {
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #24527e;
+}
+
+.sku,
+.seller {
+  margin: 7px 0;
+  font-size: 11px;
+  color: #61758b;
+}
+
+.detail-price {
+  margin-top: 17px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #0071ce;
+}
+
+.detail-price span {
+  margin-left: 7px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #64748b;
+}
+
+.detail-old {
+  margin-top: 2px;
+  font-size: 12px;
+  text-decoration: line-through;
+}
+
+.promo-line {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 20px;
+  padding: 15px 0;
+  border-top: 1px solid #e1e5e9;
+  font-size: 12px;
+}
+
+.promo-line span {
+  width: max-content;
+  padding: 5px 9px;
+  border: 1px solid #dce7f3;
+  border-radius: 5px;
+  font-size: 9px;
+  color: var(--blue);
+}
+
+.promo-line a,
+.delivery-options a,
+.extra-section > a {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+/* Cantidad + agregar al carrito + favorito */
+.buy-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 3px 0 22px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid #0871ce;
+  border-radius: 6px;
+}
+
+.quantity button {
+  border: 0;
+  background: none;
+  color: #0871ce;
+  font-size: 18px;
+}
+
+.add-detail {
+  flex: 1;
+  height: 38px;
+  padding: 8px;
+}
+
+.heart {
+  border: 0;
+  background: transparent;
+  font-size: 24px;
+  color: var(--navy);
+}
+
+.pay-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 12px;
+  border: 1px solid #333;
+  font-size: 10px;
+}
+
+.pay-box b {
+  font-style: italic;
+  font-size: 18px;
+}
+
+/* Envío y retiro */
+.delivery-options {
+  display: grid;
+  gap: 14px;
+  padding: 12px 0;
+  border-top: 1px solid #ccd5df;
+  border-bottom: 1px solid #ddd;
+}
+
+.delivery-options > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: var(--blue);
+}
+
+.delivery-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #d7eaf8;
+  font-size: 17px;
+}
+
+/* Garantías y servicios */
+.extra-section {
+  padding: 13px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.extra-section h3 {
+  margin: 0 0 9px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.extra-section > a {
+  font-size: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 8px 0;
+  font-size: 10px;
+}
+
+.option b {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.option input {
+  accent-color: #0871ce;
+}
+
+.product-description {
+  margin: 14px 0;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #52677e;
+}

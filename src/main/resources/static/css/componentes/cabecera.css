@@ -1,0 +1,97 @@
+/* ---------------------------------------------------------------------
+   4. CABECERA
+   --------------------------------------------------------------------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  height: auto;
+  min-height: 76px;
+  padding: 14px 5%;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 2px 8px #102c5008;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 17px;
+  white-space: nowrap;
+}
+
+.brand-mark,
+.footer-brand {
+  background: var(--orange);
+  color: #fff;
+  font-weight: 800;
+  font-size: 22px;
+  padding: 7px 9px;
+  border-radius: 7px;
+  letter-spacing: -1px;
+}
+
+/* Buscador */
+.search {
+  display: flex;
+  flex: 1;
+  max-width: 420px;
+  background: #f2f5f8;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 12px;
+  outline: 0;
+}
+
+.search button {
+  border: 0;
+  background: var(--navy);
+  color: #fff;
+  padding: 0 18px;
+}
+
+/* Menú de navegación */
+nav {
+  display: flex;
+  gap: 19px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+nav a:hover,
+.account a:hover {
+  color: var(--orange);
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.cart-btn {
+  border: 0;
+  background: #f1f5f9;
+  padding: 10px 13px;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.menu-btn {
+  display: none;
+  border: 0;
+  background: none;
+  font-size: 22px;
+}

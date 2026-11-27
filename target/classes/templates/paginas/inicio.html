@@ -1,0 +1,49 @@
+<!-- Página de inicio -->
+<th:block th:fragment="plantillas">
+
+  <template id="tpl-inicio">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">TECNOLOGÍA PARA TODOS</span>
+        <h1>Renueva tu hogar<br>con <em>Tiendas ElectroHogar</em></h1>
+        <p>Encuentra celulares, televisores, laptops y electrohogar en un solo lugar.</p>
+        <button class="btn" data-page="catalogo">Explorar productos</button>
+      </div>
+      <div class="hero-art">
+        <div class="hero-circle">EFE</div>
+        <div class="hero-phone"><img src="{{fotoCelular}}" alt="Celular" onerror="imgFallback(this)"></div>
+        <div class="hero-tv"><img src="{{fotoTv}}" alt="Televisor" onerror="imgFallback(this)"></div>
+        <div class="hero-home"><img src="{{fotoRefri}}" alt="Refrigeradora" onerror="imgFallback(this)"></div>
+      </div>
+    </section>
+
+    <section class="section home-categories">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">COMPRA FÁCIL</span>
+          <h2>Categorías destacadas</h2>
+        </div>
+      </div>
+      <div class="category-grid">{{{categorias}}}</div>
+    </section>
+
+    <section class="section home-products">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">SELECCIÓN EFE</span>
+          <h2>Productos destacados</h2>
+        </div>
+        <a href="#" onclick="go('catalogo');return false">Ver todos →</a>
+      </div>
+      <div class="product-grid">{{{destacados}}}</div>
+    </section>
+  </template>
+
+  <template id="tpl-categoria-card">
+    <a class="category-card" href="#" onclick="filterCategory({{id}});return false">
+      <img class="category-photo" src="{{foto}}" alt="{{nombre}}" onerror="imgFallback(this)">
+      <span>{{nombre}}</span>
+    </a>
+  </template>
+
+</th:block>

@@ -1,0 +1,48 @@
+<!-- Inicio de sesión y registro -->
+<th:block th:fragment="plantillas">
+
+  <template id="tpl-login">
+    <div class="form-card">
+      <span class="eyebrow">BIENVENIDO DE NUEVO</span>
+      <h1>Iniciar sesión</h1>
+      <p class="muted">Ingresa con tu correo y contraseña.</p>
+
+      <form id="authForm">
+        <div class="field"><label>Correo electrónico</label><input name="correo" type="email" required></div>
+        <div class="field"><label>Contraseña</label><input name="password" type="password" minlength="6" required></div>
+        <button class="btn">Ingresar</button>
+      </form>
+
+      <p class="muted">
+        ¿No tienes cuenta?
+        <a href="#" data-page="registro" style="color:#0757a6;font-weight:800">Regístrate aquí</a>
+      </p>
+    </div>
+  </template>
+
+  <template id="tpl-registro">
+    <div class="form-card">
+      <span class="eyebrow">CREA TU CUENTA</span>
+      <h1>Regístrate en ElectroHogar</h1>
+      <p class="muted">Completa tus datos para comprar.</p>
+
+      <form id="authForm">
+        <div class="form-grid">
+          <div class="field"><label>Nombres</label><input name="nombres" required></div>
+          <div class="field"><label>Apellidos</label><input name="apellidos" required></div>
+          <div class="field"><label>DNI</label><input name="dni" maxlength="8" pattern="[0-9]{8}" required></div>
+          <div class="field"><label>Celular</label><input name="telefono" maxlength="9"></div>
+        </div>
+        <div class="field"><label>Correo electrónico</label><input name="correo" type="email" required></div>
+        <div class="field"><label>Contraseña</label><input name="password" type="password" minlength="6" required></div>
+        <button class="btn">Crear cuenta</button>
+      </form>
+
+      <p class="muted">
+        ¿Ya tienes cuenta?
+        <a href="#" data-page="login" style="color:#0757a6;font-weight:800">Inicia sesión</a>
+      </p>
+    </div>
+  </template>
+
+</th:block>

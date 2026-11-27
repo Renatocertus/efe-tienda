@@ -1,0 +1,29 @@
+<!-- Plantillas pequeñas que se reutilizan en varias páginas -->
+<th:block th:fragment="plantillas">
+
+  <!-- Opción de un <select> -->
+  <template id="tpl-opcion">
+    <option value="{{valor}}">{{texto}}</option>
+  </template>
+
+  <!-- Mensaje con botón para iniciar sesión -->
+  <template id="tpl-aviso">
+    <div class="page-wrap">
+      <div class="panel empty">
+        {{mensaje}}
+        <p><button class="btn" onclick="go('login')">Iniciar sesión</button></p>
+      </div>
+    </div>
+  </template>
+
+  <!-- Mensaje de "no hay nada" -->
+  <template id="tpl-vacio">
+    <div class="empty">{{mensaje}}</div>
+  </template>
+
+  <!-- Fila de tabla vacía -->
+  <template id="tpl-fila-vacia">
+    <tr><td colspan="{{columnas}}" class="empty">{{mensaje}}</td></tr>
+  </template>
+
+</th:block>

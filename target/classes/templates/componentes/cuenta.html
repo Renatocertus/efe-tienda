@@ -1,0 +1,14 @@
+<!-- Zona de cuenta de la cabecera -->
+<th:block th:fragment="plantillas">
+
+  <template id="tpl-cuenta-sesion">
+    <span>Hola, {{nombres}}</span>
+    <button class="btn small secondary" onclick="logout()">Salir</button>
+  </template>
+
+  <template id="tpl-cuenta-visitante">
+    <a href="#" data-page="login">Iniciar sesión</a>
+    <a class="btn small" href="#" data-page="registro">Crear cuenta</a>
+  </template>
+
+</th:block>

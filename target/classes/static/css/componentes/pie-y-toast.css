@@ -1,0 +1,33 @@
+/* ---------------------------------------------------------------------
+   14. PIE DE PÁGINA Y AVISOS (TOAST)
+   --------------------------------------------------------------------- */
+footer {
+  margin-top: 55px;
+  padding: 32px 15px;
+  background: #0c2340;
+  color: #c8d4e2;
+  text-align: center;
+}
+
+footer .footer-brand {
+  display: inline-block;
+}
+
+.toast {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 10;
+  padding: 13px 18px;
+  background: #142f4f;
+  color: #fff;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: .2s;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: none;
+}

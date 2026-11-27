@@ -1,0 +1,31 @@
+<!-- Panel de administración en Tiempo Real -->
+<th:block th:fragment="plantillas">
+
+  <template id="tpl-admin">
+    <div class="page-wrap">
+      <div class="page-title admin-header-title">
+        <div>
+          <span class="eyebrow">PANEL DE CONTROL PROFESIONAL</span>
+          <h1>Administración Tiendas EFE</h1>
+          <p class="muted">Gestión de datos con MySQL 8.0 en tiempo real y sincronización en vivo.</p>
+        </div>
+        <div class="admin-sync-status">
+          <div class="{{syncClase}}">{{syncEstado}}</div>
+          <small class="muted">Último pulso: <span id="syncHora">{{ultimaSync}}</span></small>
+        </div>
+      </div>
+      <div class="admin-layout">
+        <aside class="side-menu">
+          <div class="side-menu-header">TABLAS EN VIVO</div>
+          {{{menu}}}
+        </aside>
+        <section id="adminContent">{{{contenido}}}</section>
+      </div>
+    </div>
+  </template>
+
+  <template id="tpl-admin-menu">
+    <button class="{{clase}}" onclick="cambiarTab('{{clave}}')">{{texto}}</button>
+  </template>
+
+</th:block>

@@ -1,0 +1,162 @@
+/* ---------------------------------------------------------------------
+   5. PORTADA (HERO)
+   --------------------------------------------------------------------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1250px;
+  min-height: 330px;
+  margin: 28px auto 0;
+  padding: 58px 7%;
+  background: linear-gradient(115deg, #102c50, #174e82);
+  border-radius: 18px;
+  color: white;
+  overflow: hidden;
+}
+
+.hero p {
+  max-width: 450px;
+  margin: 16px 0 24px;
+  color: #d4e0ee;
+  line-height: 1.7;
+}
+
+/* Ilustración de la derecha: círculo + 3 fotos de productos */
+.hero-art {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 340px;
+  height: 230px;
+}
+
+.hero-circle {
+  display: grid;
+  place-items: center;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: #ffffff14;
+  border: 1px solid #ffffff30;
+  font-size: 52px;
+  font-weight: 800;
+  color: #ffffff30;
+}
+
+.hero-phone,
+.hero-tv,
+.hero-home {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px #00152b55;
+}
+
+.hero-phone img,
+.hero-tv img,
+.hero-home img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-phone {
+  left: -5px;
+  top: 20px;
+  width: 105px;
+  height: 135px;
+  transform: rotate(-12deg);
+}
+
+.hero-tv {
+  right: -25px;
+  top: 0;
+  width: 135px;
+  height: 95px;
+  transform: rotate(8deg);
+}
+
+.hero-home {
+  right: 5px;
+  bottom: -12px;
+  width: 88px;
+  height: 120px;
+  transform: rotate(-5deg);
+}
+
+
+/* ---------------------------------------------------------------------
+   6. SECCIONES DE LA PORTADA
+   --------------------------------------------------------------------- */
+.section {
+  max-width: 1250px;
+  margin: 48px auto;
+  padding: 0 12px;
+}
+
+.section h2 {
+  font-size: 27px;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 22px;
+}
+
+.home-categories {
+  margin-top: 42px;
+}
+
+.home-products {
+  margin-top: 30px;
+}
+
+
+/* ---------------------------------------------------------------------
+   8. CATEGORÍAS
+   --------------------------------------------------------------------- */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 145px;
+  padding: 12px 10px 14px;
+  background: #fff;
+  text-align: center;
+  font-weight: 700;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 24px #102c5012;
+}
+
+.category-card span {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.category-photo {
+  display: block;
+  width: 100%;
+  height: 94px;
+  object-fit: contain;
+}

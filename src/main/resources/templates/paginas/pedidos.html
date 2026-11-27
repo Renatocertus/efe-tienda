@@ -1,0 +1,64 @@
+<!-- Finalizar pedido y lista de pedidos -->
+<th:block th:fragment="plantillas">
+
+  <template id="tpl-checkout">
+    <div class="form-card">
+      <span class="eyebrow">FINALIZAR PEDIDO</span>
+      <h1>Datos de entrega</h1>
+      <form id="checkoutForm">
+        <div class="field">
+          <label>Dirección guardada</label>
+          <select name="direccion">
+            <option value="">Registrar dirección nueva</option>
+            {{{direcciones}}}
+          </select>
+        </div>
+
+        <div class="form-grid">
+          <div class="field"><label>Departamento</label><input name="departamento" placeholder="Lima"></div>
+          <div class="field"><label>Provincia</label><input name="provincia" placeholder="Lima"></div>
+          <div class="field"><label>Distrito</label><input name="distrito" placeholder="Distrito"></div>
+          <div class="field"><label>Dirección</label><input name="direccionNueva" placeholder="Av. / Calle / Número"></div>
+        </div>
+
+        <div class="field">
+          <label>Método de entrega</label>
+          <select name="metodo">{{{metodos}}}</select>
+        </div>
+
+        <div class="field"><label>Observaciones</label><textarea name="obs"></textarea></div>
+
+        <h2>Total productos: {{total}}</h2>
+        <button class="btn">Confirmar compra (Pago Aprobado)</button>
+      </form>
+    </div>
+  </template>
+
+  <template id="tpl-pedidos">
+    <div class="page-wrap">
+      <div class="page-title">
+        <span class="eyebrow">SEGUIMIENTO</span>
+        <h1>{{titulo}}</h1>
+      </div>
+      <div class="panel table-wrap">
+        <table>
+          <thead>
+            <tr><th>Código</th><th>Fecha</th><th>Total</th><th>Estado</th><th>Detalle</th></tr>
+          </thead>
+          <tbody><!--{{{filas}}}--></tbody>
+        </table>
+      </div>
+    </div>
+  </template>
+
+  <template id="tpl-pedido-fila">
+    <tr>
+      <td>{{codigo}}</td>
+      <td>{{fecha}}</td>
+      <td>{{total}}</td>
+      <td><span class="tag {{claseEstado}}">{{estado}}</span></td>
+      <td><button onclick="showOrder({{id}})">Ver</button></td>
+    </tr>
+  </template>
+
+</th:block>
